@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"  href="../css/style.css" >
+</head>
+<body>
+    <div class="header" >
+        BAJOGHLI
+    </div>
+    <div>
+        <form action="/signuppage" method="POST">
+            <button class="loginbutton" >Signup</button>
+        </form>
+    </div>
+<div class="page-container" >
+    <div class="img" >
+        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yi/r/OBaVg52wtTZ.png" alt="">
+    </div>
+    <div class="testbox">
+        <h1>Login</h1>
+        <form action="/loginForm" method="POST"  >
+            <label id="icon" for="email"><i class="icon-envelope "></i></label>
+            <input type="text" name="email" value='<%=value.email%>' id="email" placeholder="Email" />
+            <p ><%=errors.email%></p>
+            <label id="icon" for="password"><i class="icon-shield"></i></label>
+            <input type="password" name="password" id="password" value='<%=value.password%>' placeholder="Password" />
+            <p ><%=errors.password%></p>
+            <button>Login</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

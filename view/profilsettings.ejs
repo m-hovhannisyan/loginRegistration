@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProfilSettings</title>
+    <link rel="stylesheet" type="text/css" href="../css/profilsettings.css">
+</head>
+<body>
+        <button onclick="totaldata()"  class="data" style="display: none" >Փոխել Ընդհանուր Անձնական Տվյալները</button>
+        <div style="display: none; " class="totaldata divs">
+            <form action="/settingsform" method="POST" >
+                <h4>Անուն</h4>
+                <input type="text" name="name" value="<%=value.name%>"><br>
+                <p style='color:red'><%=errors.name%></p>
+
+                <h4>Ազգանուն</h4>
+                <input type="text" name="surname" value="<%=value.surname%>"><br>
+                <p style='color:rgb(255, 0, 0)'><%=errors.surname%></p>
+
+                <h4>Տարիք</h4>
+                <input type="text" name="age" value="<%=value.age%>" ><br>
+                <p style='color:red'><%=errors.age%></p>
+
+                <h4>Հին գաղտնաբառ</h4>
+                <input type="password" name="old_password"  ><br>
+                <p style='color:red'><%=errors.old_password%></p>
+
+                <h4> Նոր գաղտնաբառ </h4>
+                <input type="password" name="new_password" ><br>
+                <p style='color:red'><%=errors.new_password%></p>
+
+                <h4> Կրկնել նոր գաղտնաբառը </h4>
+                <input type="password" name="confirm_password"><br>
+                <p style='color:red'><%=errors.confirm_password%></p>
+                <br>
+                <button onclick="savedata()" >Հաստատել</button>
+            </form>
+        </div>
+        <h3></h3>
+        <button onclick="namedata()" class="data" style="display: none" >Փոխել Անունը</button>
+           <div style="display: none" class="namedata divs">
+                <form action="/settingsname" method="POST" >
+                    <h4>Անուն</h4>
+                    <input type="text" name="name" value="<%=value.name%>" >
+                    <p style='color:red'> <%=errors.name%> </p>
+                    <button>Հաստատել</button>
+                </form>
+            </div>
+            <h3></h3>
+        <button onclick="surnamedata()" class="data" style="display: none;" >Փոխել Ազգանունը</button>
+            <div style="display: none;" class="surnamedata divs">
+                <form action="/settingssurname" method="POST">
+                    <h4>Ազգանուն</h4>
+                    <input type="text" name="surname" value="<%=value.surname%>" >
+                    <p style="color: red;" ><%=errors.surname%></p>
+                    <button>Հաստատել</button>
+                </form>
+            </div>
+            <h3></h3>
+        <button onclick="agedata()" class="data" style="display: none;" >Փոխել Տարիքը</button>
+            <div style="display: none;" class="agedata divs">
+                <form action="/settingsage" method="POST" >
+                    <h4>Տարիք</h4>
+                    <input type="text" name="age" value="<%=value.age%>" >
+                    <p style="color: red;" ><%=errors.age%></p>
+                    <button>Հաստատել</button>
+                </form>
+            </div>
+            <h3></h3>
+        <button onclick="emaildata()" class="data" style="display: none;" >Փոխել էլ․Հասցեն</button>
+            <div style="display: none;" class="emaildata divs">
+                <form action="/settingsemail" method="POST" >
+                    <h4>էլ․Հասցե</h4>
+                    <input type="text" name='email' value="<%=value.email%>">
+                    <p style="color: red;" ><%=errors.email%></p>
+                    <button>Հաստատել</button>
+                </form>
+            </div>
+            <h3></h3>
+        <button onclick="passworddata()" class="data" style="display: none;" >Փոխել գաղտնաբառը</button>
+            <div style="display: none;" class="passworddata divs">
+                <form action="/settingspassword" method="POST" >
+                    <h4>Հին գաղտնաբառ</h4>
+                    <input type="password" name="old_password"  ><br>
+                    <p style='color:red'><%=errors.old_password%></p>
+
+                    <h4> Նոր գաղտնաբառ </h4>
+                    <input type="password" name="new_password" ><br>
+                    <p style='color:red'><%=errors.new_password%></p>
+
+                    <h4> Կրկնել նոր գաղտնաբառը </h4>
+                    <input type="password" name="confirm_password"><br>
+                    <p style='color:red'><%=errors.confirm_password%></p>
+                    <br>
+                    <button>Հաստատել</button>
+                </form>
+            </div>
+</body>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script type="text/javascript" src="../js/profilsettings.js" ></script>
+</html> 

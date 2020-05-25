@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/userphoto.css">
+</head>
+<body>
+    <div class="header" >
+        <div>
+            BAJOGHLI
+        </div>
+        <form action="/profilpage" method="POST" class="profilpage" >
+            <button class="hetbutton" ><img width="25" height="25" src="../img/het.png" ></button>
+        </form>
+    </div>
+    <button class="addphoto" onclick="addimg()">Add Photo</button>
+        <div class="nkar" style="display: none;">
+            <form method='post' action="/addimage" enctype="multipart/form-data">
+                <input class="imageinput" type="file" name="image"  ><br>
+                <button class="buttonimg" disabled >Click</button>
+            </form>
+        </div>
+    
+    <div class="photos" >
+        <%data.forEach((i)=>{%>
+            <div class="photo<%=i.id%> photo" >
+                <img width="180" height="180" src="../<%=i.userimg%>" ><br>
+                <form action="/makeimg" method="POST" class="makeform" >
+                    <input name="img" type="hidden" value="<%=i.userimg%>" >
+                    <button class="makeimg" onclick="makeimg('<%=i.userimg%>')" >Make a profile</button>
+                </form>
+                <button class="deleteimg" onclick="deleteimg('<%=i.id%>')" >Delete</button>    
+            </div>
+        <%})%>
+    </div>
+</body>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script type="text/javascript" src="../js/userphoto.js" ></script>
+</html>

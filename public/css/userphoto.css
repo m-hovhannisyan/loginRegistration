@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+}
+.photos{
+    margin-top: 20px;
+    display: flex; 
+    flex-wrap: wrap;
+    
+}
+
+.photo{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.makeform{
+    display:inline-block;
+}
+
+button {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    /* padding: 6px 25px 0px 20px; */
+    display: inline-block;
+    /* margin:10px auto ; */
+    text-decoration: none;
+      height: 27px; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
+    background-color: #3a57af; 
+    -webkit-box-shadow: 0 3px rgba(58,87,175,.75); 
+    -moz-box-shadow: 0 3px rgba(58,87,175,.75); 
+    box-shadow: 0 3px rgba(58,87,175,.75);
+    transition: all 0.1s linear 0s; 
+    /* display:block; */
+}
+
+.hetbutton{
+    padding: 0;
+    background: none;
+    box-shadow:none;
+    margin-left: 10px;
+}
+
+.profilpage{
+    position:absolute;
+    /* display:inline-block ; */
+    margin-left:1%;
+    margin-top:-3%;
+}
+
+.header{
+    position: relative;
+    text-align: center;
+    font-size: 35px;
+    background: rgb(92, 122, 146);
+    padding: 20px;
+    color: #fff;
+    letter-spacing: 15px;
+    font-weight: 900;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.31);
+}
+
+.addphoto{
+    padding: 2px 15px 10px 15px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+}

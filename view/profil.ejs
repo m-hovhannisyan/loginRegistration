@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profil</title>
+    <link rel="stylesheet" href="css/profil.css">
+</head>
+<body>
+    <div class="header" >
+        <div>
+            BAJOGHLI
+        </div>
+        <div class="settings" >
+            <form action="/profilsettings" method="POST" >
+                <button onclick="settings()" >
+                    <img width="25" height="25" src="img/settings.png" >
+                </button>
+            </form>
+            <form action="profilout" method="POST" style="display: inline-block" >
+                <button onclick="logout()">
+                    <img width="25" height="25" src="img/logout.png" >
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class='userdata' >
+        <h1></h1>
+        <h2><%=user.name%></h2>
+        <h2><%=user.surname%></h2><br>
+        <!-- <span>age - <%=user.age%></span> -->
+    </div>
+    <div class="userimg">
+        <img width="100" height="100" src='<%=user.image%>'><br>
+        <p></p>
+        <button class="poxel"  onclick="poxel()" >ՓՈԽԵԼ ԷՋԻ ՆԿԱՐԸ</button>
+        <div style="display: none" class="nkar">
+            <form method='post' action="/uploadimage" enctype="multipart/form-data">
+                <input class="inpimg" type="file" name="image"  ><br>
+                <button class='buttonimg' disabled>Click</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="photo" >
+        <form action="/userphoto" method="POST" >
+            <button>ՆԿԱՐՆԵՐ</button>
+        </form>
+    </div>
+</body>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script type="text/javascript" src="js/profil.js" ></script>
+</html>

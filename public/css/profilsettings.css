@@ -1,0 +1,44 @@
+body{
+    background: rgb(80, 54, 109);
+    text-align: center;
+}
+h1{
+    display:inline-block;
+    /* margin-top: 10px; */
+}
+h2{
+    display: inline-block;
+    margin-top: 5px;
+}
+.userimg{
+    position:fixed ;
+    top:5%
+}
+.userdata{
+    position: fixed;
+    /* top: 5%; */
+    left: 12%;
+}
+button{
+    padding: 5px 15px;
+    font-weight: 800;
+    font-size: 15px;
+    border: 0;
+    cursor: pointer;
+    background: #0078D7;
+}
+input{
+    padding:8px 15px;
+    cursor: pointer;
+    font-weight: 800;
+    background: #0078D7;
+
+}
+.settings{
+    position: absolute;
+    top:5%;
+    right:5% ;
+}
+.divs{ 
+    border: 1px solid black; 
+}

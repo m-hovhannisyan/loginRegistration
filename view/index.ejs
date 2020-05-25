@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"  href="../css/style.css" >
+</head>
+<body>
+    <div class="header" >
+        BAJOGHLI
+    </div>
+    <div>
+        <form action="/loginpage" method="POST" >
+            <button class="loginbutton" >Login</button>
+        </form>
+    </div>
+<div class="page-container" >
+    <div class="img" >
+        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yi/r/OBaVg52wtTZ.png" alt="">
+    </div>
+
+    <div class="testbox">
+        <h1>Registration</h1>
+        <form action="/signupForm" method='post' >
+
+            <label id="icon" for="name"><i class="icon-user"></i></label>
+            <input type="text" value="<%=value.name%>" name="name" id="name" placeholder="Name" />            
+            <p ><%=errors.name%></p>
+
+            <label id="icon" for="surname"><i class="icon-user"></i></label>
+            <input type="text" value='<%=value.surname%>' id="surname" name="surname" placeholder="surnmae" >
+            <p ><%=errors.surname%></p>
+
+            <label id="icon" for="age"><i class="icon-user"></i></label>
+            <input type="text" value='<%=value.age%>' id="age" name="age" placeholder="age" >
+            <p ><%=errors.age%></p>
+
+            <label id="icon" for="email"><i class="icon-envelope "></i></label>
+            <input type="text" name="email" value='<%=value.email%>' id="email" placeholder="Email" />
+            <p ><%=errors.email%></p>
+            
+            <label id="icon" for="password"><i class="icon-shield"></i></label>
+            <input type="password" name="password" id="password" value='<%=value.password%>' placeholder="Password" />
+            <p ><%=errors.password%></p>
+
+            <label id="icon" for="confirm-password"><i class="icon-shield"></i></label>
+            <input type="password" value='<%= %>' id="confirm-password" name="confirm_password" placeholder="confirm password " >
+            <p ><%=errors.confirm_password%></p>
+            <button>Save</button>
+        </form>
+
+    </div>
+</div>
+</body>
+    <script type="text/javascript" src="js/script.js" ></script>
+</html>
